@@ -19,9 +19,9 @@
 - EXCEPTIONS: context gathering, writing to agent logs/prompts/plans/study, and @customtrigger automations
 
 ## Updates
-- `AGENTS.md` and `AGENTS/` are symlinks into a standalone agents repo, not host project files
+- `AGENTS.md` and `AGENTS/` are symlinks into a standalone operator repo, not host project files
 - host projects gitignore both, so agent changes never surface in the host project's `git status`
-- RESOLVE the agents repo with `readlink AGENTS.md`; its root is the parent of the resolved path
+- RESOLVE the operator repo with `readlink AGENTS.md`; its root is the parent of the resolved path
 - SHIP agent changes by committing and pushing from the resolved repo, never the host project
 - RUN any `AGENTS/git/` workflow from the resolved repo, since each only sees the repo it runs in
 - SKIP `AGENTS/logs/` and `AGENTS/prompts/` when shipping; they are runtime artifacts, not changes

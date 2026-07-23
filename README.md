@@ -1,4 +1,4 @@
-# agents
+# operator
 
 My personal operating rules for AI coding agents — a read-only-by-default posture,
 explicit action triggers, git automations, and a boring, highly-legible coding philosophy.
@@ -11,12 +11,12 @@ templates live in [`AGENTS/`](AGENTS/).
 Symlink the files into any project instead of copying, so edits stay shared:
 
 ```bash
-ln -s ~/Developer/agents/AGENTS.md   /path/to/project/AGENTS.md
-ln -s ~/Developer/agents/AGENTS      /path/to/project/AGENTS
+ln -s ~/Developer/operator/AGENTS.md   /path/to/project/AGENTS.md
+ln -s ~/Developer/operator/AGENTS      /path/to/project/AGENTS
 
 # optional: wires up the hooks and permission rules for this scaffold
 mkdir -p /path/to/project/.claude
-ln -s ~/Developer/agents/AGENTS/settings.local.json \
+ln -s ~/Developer/operator/AGENTS/settings.local.json \
       /path/to/project/.claude/settings.local.json
 ```
 
