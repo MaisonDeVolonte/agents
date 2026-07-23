@@ -41,6 +41,7 @@
 - `AGENTS/hooks/taskcompleted.sh` appends a note to the bottom of the day's log
 - `AGENTS/hooks/stop.sh` synthesizes and deletes notes at the bottom of the day's log every hour
 - `AGENTS/hooks/posttooluse.sh` runs lint on agent code at time of generation
+- `AGENTS/hooks/pretooluse.sh` blocks git force pushes and force branch deletes before they run
 - manual triggers (yes, i manually save games that have autosave, i'm that guy)
   - `@logthread` instructs the agent to `add a thread` to the bottom of the day's log
   - `@lognote` instructs the agent to `append a note` to the bottom of the day's log
