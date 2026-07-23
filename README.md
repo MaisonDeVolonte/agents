@@ -13,6 +13,15 @@ Symlink the files into any project instead of copying, so edits stay shared:
 ```bash
 ln -s ~/Developer/agents/AGENTS.md   /path/to/project/AGENTS.md
 ln -s ~/Developer/agents/AGENTS      /path/to/project/AGENTS
+
+# optional: wires up the hooks and permission rules for this scaffold
+mkdir -p /path/to/project/.claude
+ln -s ~/Developer/agents/AGENTS/settings.local.json \
+      /path/to/project/.claude/settings.local.json
 ```
+
+`settings.local.json` is deliberately not named `.claude/...` in this repo, since
+`**/.claude/settings.local.json` is a common global gitignore rule. Symlinking it in
+keeps it tracked here and ignored in the host project.
 
 These are mostly tuned to how I work — but if you like them, link away or fork.
