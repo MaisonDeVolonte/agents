@@ -1,19 +1,19 @@
 ```javascript
 /**
  * ================================
- * @file guides.md - study guide template
+ * @file study.md - study template
  * ================================
  * @description
- * - one file per feature/workflow, `AGENTS/guides/`
+ * - one file per feature/workflow, `AGENTS/study/`
  * - gitignored, local-only, never committed
  * - written on request, after a feature ships, to build a mental model of how it works
  * - lists files in ideal-build order, not alphabetical or touched-order
- * - guides are written in maximally concise, roadmap-style language — a map, not a textbook
- * @see AGENTS.md, /AGENTS/guides/
+ * - studies are written in maximally concise, roadmap-style language — a map, not a textbook
+ * @see AGENTS.md, /AGENTS/study/
  */
 ```
 
-# STUDY GUIDE: Short Title
+# STUDY: Short Title
 one line 'big idea' description of the topic/feature/concept to be studied
 
 - [ ] one line per file: what it is, why it's in this spot, one clause max

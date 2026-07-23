@@ -16,9 +16,9 @@
 # Agent Rules
 - DEFAULT posture is strictly READ-ONLY e.g. chat, brainstorm, evaluate, and plan
 - DO NOT write code, edit files, or run commands without the explicit `@letsdoit` trigger
-- EXCEPTIONS: context gathering, writing to agent logs/prompts/plans/guides, and @customtrigger automations
+- EXCEPTIONS: context gathering, writing to agent logs/prompts/plans/study, and @customtrigger automations
 
-## Automations
+## Workflows
 
 ### Git (see `AGENTS/git.md`)
 - [@gitaudit](AGENTS/git/gitaudit.md): READ-ONLY; diagnostics, triage, report, summary, and tasks
@@ -39,21 +39,21 @@
 - `AGENTS/hooks/taskcompleted.sh` appends a note to the bottom of the day's log
 - `AGENTS/hooks/stop.sh` synthesizes notes and flushes uncaptured prompts to `AGENTS/prompts/` every hour
 
-### Plans (see `AGENTS/plans.md`)
-- BEGIN complex tasks by writing a detailed plan in `AGENTS/plans/` (see `AGENTS/plans.md`)
-- COMPLETE plans with a summary at the bottom of the corresponding plan file
-
 ### Logs (see `AGENTS/logs.md`)
 - manual triggers (yes, i manually save games that have autosave, i'm that guy)
   - `@logthread` instructs the agent to `add a thread` to the bottom of the day's log
   - `@lognote` instructs the agent to `append a note` to the bottom of the day's log
   - `@logsynth` instructs the agent to `synthesize notes` at the bottom of the day's log
 
+### Plans (see `AGENTS/plans.md`)
+- BEGIN complex tasks by writing a detailed plan in `AGENTS/plans/` (see `AGENTS/plans.md`)
+- COMPLETE plans with a summary at the bottom of the corresponding plan file
+
 ### Prompts (see `AGENTS/prompts.md`)
 - the stop hook flushes any uncaptured prompts to `AGENTS/prompts/` (see Hooks)
 
-### Guides (see `AGENTS/guides.md`)
-- on request, write a study guide to `AGENTS/guides/` 
+### Study (see `AGENTS/study.md`)
+- on request, write a study to `AGENTS/study/`
 - list files touched by a shipped feature in ideal-build order
 - for building a mental model, not for reference docs
 
