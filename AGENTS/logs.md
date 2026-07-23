@@ -8,6 +8,7 @@
  * - formatting rules:
  *   - `logs` are written in MAXIMALLY clear, concise, casual language, skipping trivial details
  *   - `threads` group work by task/topic, limited to 50 lines
+ *   - `threads` name their project first, since one log is shared across every project
  *   - `sections` lead with the main idea, followed by supporting ideas
  *   - `lines` should contain a single clause/fact/action, limited to 100 characters
  *   - `notes` are appended after taskcomplete or every 15 minutes, limited to 5 bullets
@@ -22,7 +23,7 @@
 
 # AGENTS/logs/YYYY-MM-DD.md
 
-## Thread #1: Short description
+## Thread #1: project - short description
 
 ### context
 outline repo state, inherited problems, and current goals
