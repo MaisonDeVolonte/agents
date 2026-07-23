@@ -31,24 +31,26 @@
 - [@githappy](AGENTS/git/githappy.md): RELEASE; bumps version, adds tag, merges to production, and release notes
 - [@gitinsights](AGENTS/git/gitinsights.md): READ-ONLY; scans agent logs and codebase for opportunities to improve
 
+### Hooks (see `AGENTS/hooks/`)
+- `AGENTS/hooks/sessionstart.sh` creates a new empty log file in `AGENTS/logs/`
+- `AGENTS/hooks/pretooluse.sh` blocks git force pushes and force branch deletes before they run
+- `AGENTS/hooks/posttooluse.sh` runs lint on agent code at time of generation
+- `AGENTS/hooks/taskcreated.sh` nudges a new thread when a new task is unrelated to the most recent one
+- `AGENTS/hooks/taskcompleted.sh` appends a note to the bottom of the day's log
+- `AGENTS/hooks/stop.sh` synthesizes notes and flushes uncaptured prompts to `AGENTS/prompts/` every hour
+
 ### Plans (see `AGENTS/plans.md`)
 - BEGIN complex tasks by writing a detailed plan in `AGENTS/plans/` (see `AGENTS/plans.md`)
 - COMPLETE plans with a summary at the bottom of the corresponding plan file
 
 ### Logs (see `AGENTS/logs.md`)
-- `AGENTS/hooks/sessionstart.sh` creates a new empty log file in `AGENTS/logs/` 
-- `AGENTS/hooks/taskcreated.sh` nudges a new thread when a new task is unrelated to the most recent one
-- `AGENTS/hooks/taskcompleted.sh` appends a note to the bottom of the day's log
-- `AGENTS/hooks/stop.sh` synthesizes and deletes notes at the bottom of the day's log every hour
-- `AGENTS/hooks/posttooluse.sh` runs lint on agent code at time of generation
-- `AGENTS/hooks/pretooluse.sh` blocks git force pushes and force branch deletes before they run
 - manual triggers (yes, i manually save games that have autosave, i'm that guy)
   - `@logthread` instructs the agent to `add a thread` to the bottom of the day's log
   - `@lognote` instructs the agent to `append a note` to the bottom of the day's log
   - `@logsynth` instructs the agent to `synthesize notes` at the bottom of the day's log
 
 ### Prompts (see `AGENTS/prompts.md`)
-- `AGENTS/hooks/stop.sh` also flushes any uncaptured prompts to `AGENTS/prompts/` on the same tick as its log-note pass
+- the stop hook flushes any uncaptured prompts to `AGENTS/prompts/` (see Hooks)
 
 ### Guides (see `AGENTS/guides.md`)
 - on request, write a study guide to `AGENTS/guides/` 
