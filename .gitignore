@@ -11,3 +11,6 @@ AGENTS/study/*
 
 # macos
 .DS_Store
+
+# local convenience link: agents read AGENTS.md, the rulebook is README.md
+/AGENTS.md
